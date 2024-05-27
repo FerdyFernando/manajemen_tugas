@@ -1,44 +1,42 @@
-#calendar_container{
-    padding: 25px;
-    width: 240px;
-    /* height: 330px; */
-     border: 1px solid #3e464e;
-     box-shadow: 0 0 4px  black;
-     background-color: #2b2f33;
-     border-radius: 10px;
-     overflow: hidden;
-     
-}
-#calendar_header{
-    height: 12%;
+#calendar_container {
     display: flex;
-    justify-content: space-evenly;
-    gap:20px;
-}
-.fa-caret-left,.fa-caret-right{
-    color:white;
-   
-}
-.calendar-btn{
+    flex-direction: column;
+    width: 280px;
+    margin: auto;
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  #calendar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .calendar-btn {
+    background: none;
+    border: none;
+    color: white;
     cursor: pointer;
-    background-color: #fd413d;
-    width: 18px;
-    height: 18px;
-    border-radius:3px;
-    border: 0;
-}
-.days_container{
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    gap:5px;
-    justify-content: center;
- }
-.days_index_container{
+  }
+  
+  .days_container, .days_index_container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Ensure there are always 7 columns */
+    gap: 5px;
+  }
+  
+  .days_container {
+    margin-top: 10px;
+  }
+  
+  .days_index_container {
     margin-top: 5px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap ;
-    gap:5px;
-}
+  }
+  
+  #calendar_container h5 {
+    margin: 0;
+  }
+  

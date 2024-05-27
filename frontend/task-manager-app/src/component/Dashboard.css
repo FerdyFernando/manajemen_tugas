@@ -1,50 +1,70 @@
-aside#big_screen{
+aside#big_screen {
     width: 18%;
     background-color: #2b2f33;
     margin-right: 2vw;
     border-radius: 20px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding-top: 20px; /* Add padding to the top */
 }
+
 aside#small_screen {
     display: none;
 }
-#logo_container{
-    width: 100%;
-    height: 20%;
+
+#logo_container {
+    width: 100%; /* Use the full width of the container */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-ul{
-    list-style-type: none;
+    margin-bottom: 20px; /* Add some space below the logo */
 }
 
-.icon{
-    width: 10px;
+#logo_container img {
+    width: 140px; /* Set a fixed size for the logo */
+    height: auto;
+    border-radius: 50%; /* Make the logo circular */
 }
-.dash_list{
+
+ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure the ul takes full width */
+}
+
+.icon {
+    width: 20px; /* Increase icon size for better visibility */
+}
+
+.dash_list {
     cursor: pointer;
-    padding: 20px;
+    padding: 15px 20px; /* Adjust padding for a better look */
     display: flex;
+    align-items: center;
     gap: 15px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
-#clicked{
+
+#clicked {
     border-right: 4px solid #f34340;
-    box-shadow: inset -50px 0px 40px rgba(243, 67,64,0.5);    
+    box-shadow: inset -50px 0px 40px rgba(243, 67, 64, 0.5);    
 }
-#clicked h5, #clicked i{
+
+#clicked h5, #clicked i {
     color: #f34340;
 }
 
 @media screen and (max-width: 830px) {
-    
-    aside#big_screen{
+    aside#big_screen {
         display: none;
     }
-    #logo_container{
+    #logo_container {
         cursor: pointer;
     }
-    aside#small_screen{
+    aside#small_screen {
         background-color: #2b2f33;
         position: absolute;
         z-index: 4;
@@ -52,6 +72,9 @@ ul{
         right: 0;
         width: 100%;
         height: fit-content;
-    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px; /* Add padding to the top */
     }
-  }
+}

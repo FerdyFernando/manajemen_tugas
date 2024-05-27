@@ -1,4 +1,5 @@
 import "./Dashboard.css";
+import logo from "../pics/task-management.webp";
 
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -24,7 +25,7 @@ export default function Dashboard({index}){
         <>
         <aside id="big_screen">
             <div id="logo_container">
-                <h2>Logo</h2>
+                <img src={logo} id="logo"/>
             </div>
             <ul>
                           
